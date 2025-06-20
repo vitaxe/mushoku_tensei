@@ -28,13 +28,13 @@
 ## 🖼️ Скриншоты
 
 ### 📝 Посты
-![Посты](https://github.com/user-attachments/assets/fc3be797-2dc1-41d6-9814-ca050adc7c6f)
+![Посты](https://github.com/user-attachments/assets/f2ec309d-f8ff-4bd9-8e77-e3112096f0b0)
 
 ### 👤 Профиль пользователя
-![Профиль](https://sun9-56.userapi.com/s/v1/if2/ThprA5t11gp-yPmTg48UwngD9EEJyvkU8Dvg7q3pqFzSHkLhIuUchaE6jjLIrMrIkgaZ3eo1WLv7_jArP_-B0-Et.jpg?quality=95&from=bu)
+![Профиль](https://github.com/user-attachments/assets/503ffec6-362b-4732-8b62-52614c162588)
 
 ### 🛍 Страница магазина
-![Магазин](https://sun9-56.userapi.com/s/v1/if2/PblDi-LWzCGSxrHhu4VVzH3acrIDozGn8bjQYuZ8VkeTbINMUSsJWhJNMtzOhyyK-swzWng74ytHTMdYMpxHaWnw.jpg?quality=95&from=bu)
+![Магазин](https://github.com/user-attachments/assets/69071451-20ab-4474-862a-ebafb8df2079)
 
 ---
 
