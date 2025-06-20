@@ -28,7 +28,7 @@
 ## 🖼️ Скриншоты
 
 ### 📝 Посты
-![Посты](https://sun9-63.userapi.com/s/v1/if2/KupQ0WaiJpCA4DsSy5uxFLXEL7Qb7ZUgELcLEZ9TjoLFcWeRdlWXbz4EuGfp43As7Nri1Im8KrCUZEj35uWv-VUU.jpg?quality=95&from=bu)
+![Посты](https://github.com/user-attachments/assets/fc3be797-2dc1-41d6-9814-ca050adc7c6f)
 
 ### 👤 Профиль пользователя
 ![Профиль](https://sun9-56.userapi.com/s/v1/if2/ThprA5t11gp-yPmTg48UwngD9EEJyvkU8Dvg7q3pqFzSHkLhIuUchaE6jjLIrMrIkgaZ3eo1WLv7_jArP_-B0-Et.jpg?quality=95&from=bu)
