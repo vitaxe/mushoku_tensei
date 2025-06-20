@@ -41,3 +41,19 @@
 ---
 
 ## 📁 Структура проекта
+
+/public_html
+│
+├── index.php
+├── profile.php
+├── store.php
+├── gallery.php
+├── admin/
+│ └── add_product.php
+├── css/
+│ └── styles.css
+├── images/
+│ └── logo.svg
+├── screenshots/
+│ └── *.png
+└── ...
