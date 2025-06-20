@@ -56,7 +56,6 @@ $others = array_slice($products, 3);
 </head>
 
 <body>
-<?php require 'assets/preloader.php'; ?>
     <header>
         <nav>
             <div class="logo">

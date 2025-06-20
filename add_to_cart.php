@@ -1,24 +1,3 @@
-
-<!-- session_start();
-
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = [];
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
-    $productId = (int)$_POST['product_id'];
-
-    if (isset($_SESSION['cart'][$productId])) {
-        $_SESSION['cart'][$productId]['quantity'] += 1;
-    } else {
-        $_SESSION['cart'][$productId] = ['quantity' => 1];
-    }
-}
-
-header('Location: shop.php');
-exit; -->
-
-
 <?php
 session_start();
 require_once 'config.php';

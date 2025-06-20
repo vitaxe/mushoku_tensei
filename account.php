@@ -189,34 +189,50 @@ foreach ($orders as $order) {
                     </div>
                 </div>
             <?php else: ?>
-                <?php foreach ($groupedOrders as $date => $dayOrders): ?>
-                    <div class="order-group">
-                        <h3 class="order-date"><?= date('d.m.Y', strtotime($date)) ?></h3>
-                        <div class="orders-list">
-                            <?php foreach ($dayOrders as $order): ?>
-                                <div class="order-item">
-                                    <img src="<?= htmlspecialchars($order['image_url']) ?>" 
-                                         alt="<?= htmlspecialchars($order['product_name']) ?>" 
-                                         class="order-image">
-                                    <div class="order-details">
-                                        <h4><?= htmlspecialchars($order['product_name']) ?></h4>
-                                        <p class="order-quantity">Количество: <?= $order['quantity'] ?></p>
-                                        <p class="order-price">
-                                            <?= number_format($order['price'] * $order['quantity'], 0, '', ' ') ?> ₽
-                                        </p>
+                <button class="toggle-history-btn" onclick="togglePurchaseHistory()">
+                    <span class="toggle-text">Показать все покупки</span>
+                    <img src="image/arrow-down.svg" alt="Развернуть" class="toggle-icon">
+                </button>
+                <div class="purchase-history-container">
+                    <?php 
+                    $firstDate = true;
+                    foreach ($groupedOrders as $date => $dayOrders): 
+                    ?>
+                        <div class="order-group <?= $firstDate ? 'visible' : 'hidden' ?>">
+                            <h3 class="order-date"><?= date('d.m.Y', strtotime($date)) ?></h3>
+                            <div class="orders-list">
+                                <?php 
+                                $isFirstGroup = $firstDate;
+                                foreach ($dayOrders as $index => $order): 
+                                    if ($isFirstGroup && $index >= 3) continue;
+                                ?>
+                                    <div class="order-item">
+                                        <img src="<?= htmlspecialchars($order['image_url']) ?>" 
+                                             alt="<?= htmlspecialchars($order['product_name']) ?>" 
+                                             class="order-image">
+                                        <div class="order-details">
+                                            <h4><?= htmlspecialchars($order['product_name']) ?></h4>
+                                            <p class="order-quantity">Количество: <?= $order['quantity'] ?></p>
+                                            <p class="order-price">
+                                                <?= number_format($order['price'] * $order['quantity'], 0, '', ' ') ?> ₽
+                                            </p>
+                                        </div>
+                                        <div class="order-status">
+                                            <span class="status-badge <?= $order['status'] ?>">
+                                                <?= $order['status'] === 'completed' ? 'Доставлен' : 
+                                                   ($order['status'] === 'processing' ? 'В обработке' : 
+                                                   ($order['status'] === 'shipped' ? 'Отправлен' : 'В пути')) ?>
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="order-status">
-                                        <span class="status-badge <?= $order['status'] ?>">
-                                            <?= $order['status'] === 'completed' ? 'Доставлен' : 
-                                               ($order['status'] === 'processing' ? 'В обработке' : 
-                                               ($order['status'] === 'shipped' ? 'Отправлен' : 'В пути')) ?>
-                                        </span>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
+                                <?php 
+                                endforeach;
+                                $firstDate = false;
+                                ?>
+                            </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
             <?php endif; ?>
         </section>
     </main>
@@ -315,6 +331,26 @@ foreach ($orders as $order) {
                 alert('Произошла ошибка при отправке формы');
             }
         });
+
+        // Функция переключения истории покупок
+        const togglePurchaseHistory = () => {
+            const hiddenGroups = document.querySelectorAll('.order-group.hidden');
+            const toggleBtn = document.querySelector('.toggle-history-btn');
+            const toggleText = toggleBtn.querySelector('.toggle-text');
+            const toggleIcon = toggleBtn.querySelector('.toggle-icon');
+            
+            hiddenGroups.forEach(group => {
+                if (group.style.display === 'none') {
+                    group.style.display = 'block';
+                    toggleText.textContent = 'Скрыть покупки';
+                    toggleIcon.style.transform = 'rotate(180deg)';
+                } else {
+                    group.style.display = 'none';
+                    toggleText.textContent = 'Показать все покупки';
+                    toggleIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+        };
     </script>
 </body>
 

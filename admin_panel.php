@@ -61,6 +61,9 @@ $books = dbSelect($sqlBooks);
                     <li class="nav-item">
                         <a class="nav-link" href="add_product.php">Добавить товар</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-orders.php">Обработка заказов</a>
+                    </li>
                 </ul>
 
                 <div class="account">

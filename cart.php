@@ -96,7 +96,17 @@ if (!empty($_SESSION['cart'])) {
         <div class="cart-total">
             <h3>Итого: <?= number_format($total, 0, '', ' ') ?> ₽</h3>
             <?php if (!empty($_SESSION['cart'])): ?>
-                <a href="confirm_order.php" class="checkout-btn">Оформить заказ</a>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="confirm_order.php" class="checkout-btn">Оформить заказ</a>
+                <?php else: ?>
+                    <div class="auth-message">
+                        <p>Для оформления заказа необходимо войти в аккаунт</p>
+                        <div class="auth-buttons">
+                            <a href="login.php" class="auth-btn login-btn">Войти</a>
+                            <a href="register.php" class="auth-btn register-btn">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
         

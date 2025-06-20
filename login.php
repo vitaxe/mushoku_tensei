@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div class="container">
+        <a href="index.php" class="close-btn">&times;</a>
         <div class="logo-full">
             <a href="./index.php"> <img src="./image/logo-full.svg" class="logo-full"> </a>
         </div>

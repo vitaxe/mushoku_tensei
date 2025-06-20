@@ -570,8 +570,44 @@ footer {
     background-color: #BC783D;
 }
 
+/* Кнопка переключения истории покупок */
+.toggle-history-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f8f8;
+    border: 2px solid #E3BA87;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-history-btn:hover {
+    background-color: #E3BA87;
+    color: white;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.purchase-history-container {
+    margin-top: 20px;
+}
+
+.order-group.hidden {
+    display: none;
+}
+
 .order-group {
     margin-bottom: 30px;
+    transition: all 0.3s ease;
 }
 
 .order-date {

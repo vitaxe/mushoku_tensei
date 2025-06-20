@@ -50,10 +50,9 @@ $stories = dbSelect($sqlStories);
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Добавить серию — Админ-панель</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
     <!-- Подключение Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJr+MQX0r4HU2v8wP5g8cFf8Xg+7JfbT0OryhpmVEn7E5Cxw6cxH2kmYfqJb" crossorigin="anonymous">
@@ -79,6 +78,9 @@ $stories = dbSelect($sqlStories);
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="add_product.php">Добавить товар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-orders.php">Обработка заказов</a>
                     </li>
                 </ul>
 

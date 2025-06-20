@@ -57,3 +57,41 @@ function dbUpdate($sql, $params = []) {
         return false;
     }
 }
+
+/**
+ * Executes an SQL query that modifies the database (INSERT, UPDATE, DELETE)
+ * @param string $sql The SQL query to execute
+ * @param array $params Array of parameters to bind to the query
+ * @return bool Returns true on success, false on failure
+ */
+function dbExecute($sql, $params = []) {
+    try {
+        $pdo = getPDO();
+        $stmt = $pdo->prepare($sql);
+        return $stmt->execute($params);
+    } catch (PDOException $e) {
+        // Log error if needed
+        return false;
+    }
+}
+
+/**
+ * Gets a PDO connection instance
+ * @return PDO
+ */
+function getPDO() {
+    static $pdo;
+    
+    if (!$pdo) {
+        require_once 'config.php';
+        try {
+            $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8mb4";
+            $pdo = new PDO($dsn, $db_user, $db_password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("Connection failed: " . $e->getMessage());
+        }
+    }
+    
+    return $pdo;
+}

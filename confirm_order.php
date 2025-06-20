@@ -63,6 +63,10 @@ $user = dbSelect($userQuery, [':id' => $userId])[0];
             </div>
         </div>
 
+        <div class="contact-info">
+            <p>После оформления заказа наш менеджер свяжется с вами по телефону для уточнения способа оплаты и деталей доставки.</p>
+        </div>
+
         <form action="process_order.php" method="POST" class="contact-form">
             <h2>Контактные данные</h2>
             <div class="form-group">
