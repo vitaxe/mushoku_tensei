@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Mak', sans-serif;
+}
+
+/*Хедер*/
+
+
+
+/* Шапка */
+
+
+/* блоки книг */
+.card {
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 469px;
+    height: 666px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    color: #BC783D;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Mak', serif;
+}
+
+.description {
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #603A15;
+    margin-bottom: 20px;
+}
+
+.details-button {
+    font-family: 'Mak', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 250px;
+    height: 60px;
+    font-size: 18px;
+    border: 2px solid #bc8968;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #bc8968;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.details-button:hover {
+    background-color: #bc8968;
+    color: white;
+}
+
+/* перевернутая карточка */
+
+.card.reverse {
+    display: flex;
+}
+
+
+/* подвал */
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.peg-sou,
+.panel {
+    padding-left: 200px;
+}
+
+.peg-sou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sours {
+    padding-bottom: 10px;
+}
+
+.panel a {
+    text-decoration: none;
+    color: #E4DDCA;
+    font-weight: bold;
+}
+
+
+
+/* Скрыть header и footer на мобильных устройствах */
+/* Нижняя панель навигации */
+
+
+@media (max-width: 1024px) {
+
+    .card {
+        flex-direction: column;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card.reverse {
+        flex-direction: column-reverse;
+        width: 90%;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .details-button {
+        width: 200px;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) {
+
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+
+}

@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Mak', sans-serif;
+}
+
+
+
+
+/* тут был хэдер */
+
+
+
+
+
+/* Шапка */
+
+
+
+
+/* карточка с серией */
+.carts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.series-cart {
+    width: 459px;
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.series-image {
+    width: 90%;
+    height: 70%;
+}
+
+.series-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.series-number {
+    color: #603A15;
+}
+
+.series-title {
+    color: #E4BB88;
+
+}
+
+.series-iframe {
+    width: 90%;
+    height: 70%;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.peg-sou,
+.panel {
+    padding-left: 200px;
+}
+
+.peg-sou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sours {
+    padding-bottom: 10px;
+}
+
+.panel a {
+    text-decoration: none;
+    color: #E4DDCA;
+    font-weight: bold;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+
+    .indent{
+        height: 60px;
+    }
+
+}

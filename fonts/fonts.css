@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Mak';
+    src: url('../fonts/Mak-Light.woff2') format('woff2'),
+    url('../fonts/Mak-Light.woff') format('woff'),
+    url('../fonts/Mak-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+@font-face {
+    font-family: 'Mak';
+    src: url('../fonts/Mak-Bold.woff2') format('woff2'),
+    url('../fonts/Mak-Bold.woff') format('woff'),
+    url('../fonts/Mak-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}

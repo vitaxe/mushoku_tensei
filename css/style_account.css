@@ -1,0 +1,720 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e4ddcabb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mak', sans-serif;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(to bottom, black, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.logo img {
+    width: 100px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #B9B9B9;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.active {
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Иконка аккаунта */
+.account {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.account img {
+    height: 40px;
+}
+
+/* Контент */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 120px;
+    padding: 20px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Основная страница аккаунта */
+.account-page {
+    flex: 1; /* Добавлено */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    padding-bottom: 80px;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Профиль */
+.profile-details p {
+    padding: 10px;
+}
+
+.profile {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.edit-btn,
+.logout-btn {
+    font-family: 'Mak', sans-serif;
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: 2px solid #bc8968;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #bc8968;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-btn:hover,
+.logout-btn:hover {
+    background-color: #bc8968;
+    color: white;
+}
+
+/* Любимые персонажи */
+.favorite-characters {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.characters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.character-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Общие стили для разделов */
+.my-posts,
+.purchase-history {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.my-posts h2,
+.purchase-history h2 {
+    color: #603A15;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Форма создания поста */
+.create-post-form {
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.create-post-form .form-group {
+    margin-bottom: 15px;
+}
+
+.create-post-form label {
+    display: block;
+    color: #603A15;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.create-post-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #E3BA87;
+    border-radius: 5px;
+    background: white;
+}
+
+.create-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #E3BA87;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.submit-post, .cancel-post {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.submit-post {
+    background: #E3BA87;
+    color: white;
+}
+
+.submit-post:hover {
+    background: #BC783D;
+}
+
+.cancel-post {
+    background: #f1f1f1;
+    color: #666;
+}
+
+.cancel-post:hover {
+    background: #e0e0e0;
+}
+
+/* Список постов */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.post-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.post-content {
+    display: flex;
+    align-items: stretch;
+}
+
+.post-image {
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+    background-color: #f8f8f8;
+    border-right: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.post-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.post-description {
+    color: #333;
+    line-height: 1.5;
+    font-size: 14px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.post-date {
+    color: #999;
+    font-size: 13px;
+}
+
+.delete-post-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.delete-post-btn:hover {
+    opacity: 1;
+}
+
+.delete-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+
+.delete-post-btn:hover .delete-icon {
+    transform: scale(1.1);
+}
+
+/* Адаптивность для постов */
+@media (max-width: 768px) {
+    .post-content {
+        flex-direction: column;
+    }
+
+    .post-image {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .post-info {
+        padding: 12px;
+    }
+
+    .post-description {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .posts-list {
+        gap: 10px;
+    }
+
+    .post-image {
+        height: 180px;
+    }
+
+    .post-info {
+        padding: 10px;
+    }
+
+    .post-description {
+        font-size: 12px;
+    }
+
+    .post-date {
+        font-size: 11px;
+    }
+}
+
+/* Кнопка добавления поста */
+.add-post-btn {
+    background: #E3BA87;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.add-post-btn:hover {
+    background: #BC783D;
+}
+
+/* Предпросмотр изображения */
+#imagePreview {
+    margin-top: 10px;
+    max-width: 100%;
+    height: 200px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+}
+
+#imagePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Подвал */
+footer {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.peg-sou,
+.panel {
+    padding-left: 200px;
+}
+
+.peg-sou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sours {
+    padding-bottom: 10px;
+}
+
+.panel a {
+    text-decoration: none;
+    color: #E4DDCA;
+    font-weight: bold;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    .story {
+        padding-left: 40px;
+    }
+}
+
+/* Нижняя навигация */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    border-top: 1px solid #ffffffbe;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    color: #E4DDCA;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.nav-item img {
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.logo-center img {
+    height: 36px;
+}
+
+@media (max-width: 1024px) {
+    .bottom-nav {
+        display: flex;
+    }
+}
+
+@media (min-width: 1025px) {
+    .bottom-nav {
+        display: none;
+    }
+}
+
+/* История покупок */
+.empty-history {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.empty-history p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.empty-history .buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.shop-link {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #E3BA87;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.shop-link:hover {
+    background-color: #BC783D;
+}
+
+.order-group {
+    margin-bottom: 30px;
+}
+
+.order-date {
+    color: #603A15;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E3BA87;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #FDF9F4;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.order-item:hover {
+    transform: translateX(5px);
+}
+
+.order-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.order-details {
+    flex: 1;
+}
+
+.order-details h4 {
+    color: #603A15;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.order-quantity {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.order-price {
+    color: #BC783D;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.order-status {
+    margin-left: 20px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-badge.completed {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.status-badge.processing {
+    background-color: #FFC107;
+    color: #000;
+}
+
+.status-badge.shipped {
+    background-color: #2196F3;
+    color: white;
+}
+
+.status-badge.in-transit {
+    background-color: #9C27B0;
+    color: white;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .purchase-history {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .order-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .order-image {
+        width: 100px;
+        height: 100px;
+        margin: 0 0 15px 0;
+    }
+
+    .order-details {
+        margin-bottom: 15px;
+    }
+
+    .order-status {
+        margin: 10px 0 0 0;
+    }
+
+    .status-badge {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 850px) {
+    .my-posts,
+    .purchase-history {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+}
+
+@media (max-480px) {
+    .my-posts,
+    .purchase-history {
+        margin: 15px 10px;
+        padding: 15px;
+    }
+
+    .my-posts h2,
+    .purchase-history h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}

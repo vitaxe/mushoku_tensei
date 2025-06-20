@@ -1,0 +1,236 @@
+/*Хедер*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(to bottom, black, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+
+}
+
+.logo img {
+    width: 100px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+    /* Для центровки навигации */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #B9B9B9;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.logo-center img {
+    height: 36px;
+}
+.active {
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+/* Стили для иконки аккаунта */
+.account {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.account img {
+    height: 40px;
+    /* Размер иконки аккаунта */
+
+}
+
+
+
+
+/* 2 шапка */
+/* Шапка */
+.header_mini {
+    display: flex;
+    align-items: center;
+    background-image: url("../image/header_mini.png");
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-size: cover;
+    height: 250px;
+}
+.img_header2 h1 {
+    margin: 100px 0px 20px 0px;
+    font-size: 128px;
+    color: #ffffff;
+    margin: 0;
+    word-break: break-word;
+}
+
+
+
+
+
+
+/* Скрыть header и footer на мобильных устройствах */
+/* Нижняя панель навигации */
+.bottom-nav {
+    position: fixed;  /* Панель всегда фиксирована внизу */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;  /* Очень высокий z-index, чтобы быть выше всех элементов */
+    border-top: 1px solid #ffffffbe;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    color: #E4DDCA;
+    font-size: 12px;
+    text-decoration: none;
+    /* подумать */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item img {
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.peg-sou,
+.panel {
+    padding-left: 200px;
+}
+
+.peg-sou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sours {
+    padding-bottom: 10px;
+}
+
+.panel a {
+    text-decoration: none;
+    color: #E4DDCA;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+    header {
+        display: none; /* Скрыть header на мобильных */
+    }
+    footer {
+        display: none;
+    }
+
+    .img_header2 h1 {
+        font-size: 100px;
+    }
+
+}
+
+/* Адаптивность: показывать панель только на мобильных */
+@media (max-width: 1024px) {
+    .bottom-nav {
+        display: flex;
+    }
+    .img_header2 h1 {
+        font-size: 90px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .bottom-nav {
+        display: none;
+    }
+}
+.content {
+    padding-bottom: 60px;  /* Добавляем отступ снизу, чтобы контент не перекрывал панель */
+}
+
+@media (max-width: 768px) {
+    .img_header2 h1 {
+        font-size: 70px;
+        margin: 50px 0;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .details-button {
+        width: 180px;
+        font-size: 14px;
+    }
+
+    .img_header2 h1 { 
+        font-size: 40px;
+    }
+}

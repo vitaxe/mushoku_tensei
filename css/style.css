@@ -1,0 +1,638 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Mak', sans-serif;
+}
+
+
+/* Основной контент страницы */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 120px;
+    padding: 20px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Главная страница top */
+.hero {
+    display: flex;
+}
+
+.hero video {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    /* border-radius: 0px 0px 20px 20px; */
+}
+
+.img_fon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.img_fon img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.hero img {
+    z-index: 2;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+}
+  
+.scroll-downs {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    margin: auto;
+    width :34px;
+    height: 55px;
+}
+  
+@keyframes wheel {
+    to {
+      opacity: 0;
+      top: 60px;
+    }
+}
+  
+@-webkit-keyframes wheel {
+    to {
+      opacity: 0;
+      top: 60px;
+    }
+}
+
+/* Стили для секции истории */
+.story {
+    display: flex;
+    align-items: center;
+    background-image: url("../image/cuty.png");
+    /* background-size: contain; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 420px;
+}
+
+.story-content {
+    max-width: 700px;
+    margin: 150px 0px 150px 0px;
+}
+
+.story-content h1 {
+    font-size: 128px;
+    margin-bottom: 50px;
+    color: #E3BA87;
+}
+
+.story-content h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #603A15;
+}
+
+.story-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #252525;
+}
+
+.details-btn {
+    font-family: 'Mak', sans-serif;
+    padding: 18px 40px;
+    font-size: 25px;
+    font-weight: 500;
+    border: 3px solid #E3BA87;
+    background-color: transparent;
+    color: #E3BA87;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #E3BA87;
+    color: #fff;
+}
+
+
+/* магазин */
+.shopmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.shop {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.add1,
+.add2 {
+    flex: 1;
+}
+
+.add1 img,
+.add2 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.add1 img:hover,
+.add2 img:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+/* рассылка */
+.messag {
+    display: flex;
+    justify-content: center;
+    background-image: url("../image/roxy_back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mess-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 185px 0px 280px 0px;
+}
+
+.mess-content h1 {
+    font-size: 96px;
+    margin-bottom: 40px;
+    color: #BC783D;
+}
+
+.mass-all {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+}
+
+.name,
+.mail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    color: #603A15;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+input[type="text"] {
+    width: 450px;
+    padding: 10px;
+    border: 3px solid #603A15;
+    font-size: 20px;
+    color: #603A15;
+    margin-top: 10px;
+}
+
+.check-all {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    max-width: 450px;
+}
+
+.check-all label {
+    display: flex;
+    width: 530px;
+    color: #603A15;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.check-all input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #603A15;
+    margin-right: 10px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.check-all input[type="checkbox"]:checked {
+    background-color: #603A15;
+}
+
+.seend {
+    font-family: 'Mak', sans-serif;
+    padding: 15px 190px;
+    font-size: 25px;
+    font-weight: 500;
+    border: 3px solid #E3BA87;
+    background-color: #E3BA87;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.seend:hover {
+    background-color: transparent;
+    color: #E3BA87;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.peg-sou,
+.panel {
+    padding-left: 200px;
+}
+
+.peg-sou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sours {
+    padding-bottom: 10px;
+}
+
+.panel a {
+    text-decoration: none;
+    color: #E4DDCA;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Скрыть header на мобильных устройствах */
+@media (max-width: 1024px) {
+    .story {
+        padding-left: 40px;
+    }
+
+    .story-content {
+        margin: 60px 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .story-content h1 {
+        font-size: 90px;
+    }
+
+    .story-content h2 {
+        font-size: 32px;
+    }
+
+    .img_fon img {
+        max-width: 600px;
+    }
+
+    .mess-content {
+        margin: 100px 0;
+        padding: 0 20px;
+    }
+
+    .mess-content h1 {
+        font-size: 72px;
+        text-align: center;
+    }
+
+    .mass-all {
+        width: 100%;
+    }
+
+    .name, .mail {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        max-width: 400px;
+        font-size: 18px;
+    }
+
+    .check-all {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .check-all label {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .seend {
+        padding: 12px;
+        width: 100%;
+        max-width: 400px;
+        font-size: 22px;
+    }
+
+    .shopmin {
+        padding: 30px 15px;
+    }
+
+    .shop {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .add1,
+    .add2 {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* Нижняя панель навигации */
+
+
+
+/* Стили для секции с историей */
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .story {
+        padding: 30px 10px;
+    }
+
+    .story-content {
+        margin: 40px 0;
+    }
+
+    .story-content h1 {
+        font-size: 80px;  /* Уменьшаем размер шрифта заголовка */
+    }
+
+    .story-content h2 {
+        font-size: 32px;  /* Уменьшаем размер подзаголовка */
+    }
+
+    .story-content p {
+        font-size: 16px;  /* Уменьшаем размер текста */
+    }
+
+    .details-btn {
+        padding: 12px 30px;  /* Уменьшаем размеры кнопки */
+        font-size: 20px;  /* Уменьшаем шрифт кнопки */
+    }
+
+    .img_fon img {
+        max-width: 400px;
+    }
+
+    .mess-content {
+        margin: 80px 0;
+    }
+
+    .mess-content h1 {
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+
+    .name, .mail {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    input[type="text"] {
+        max-width: 350px;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .check-all {
+        max-width: 350px;
+        margin-bottom: 40px;
+    }
+
+    .check-all label {
+        font-size: 13px;
+    }
+
+    .seend {
+        max-width: 350px;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .shopmin {
+        padding: 25px 10px;
+    }
+
+    .shop {
+        gap: 20px;
+    }
+
+    .add1,
+    .add2 {
+        max-width: 500px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .story-content {
+        margin: 30px 0;
+    }
+
+    .story-content h1 {
+        font-size: 40px;
+    }
+
+    .story-content h2 {
+        font-size: 24px;
+    }
+
+    .story-content p {
+        font-size: 14px;
+    }
+
+    .details-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .img_fon img {
+        max-width: 300px;
+    }
+
+    .mess-content {
+        margin: 60px 0;
+    }
+
+    .mess-content h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .name, .mail {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+        max-width: 300px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .check-all {
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .check-all label {
+        font-size: 12px;
+    }
+
+    .seend {
+        max-width: 300px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .shopmin {
+        padding: 20px 10px;
+    }
+
+    .shop {
+        gap: 15px;
+    }
+
+    .add1,
+    .add2 {
+        max-width: 400px;
+    }
+}
+
+/* Стили для всплывающего окна */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.popup-content h3 {
+    color: #603A15;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    color: #252525;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#subscribedEmail {
+    color: #BC783D;
+    font-weight: bold;
+}
+
+.popup-close {
+    font-family: 'Mak', sans-serif;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid #E3BA87;
+    background-color: #E3BA87;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.popup-close:hover {
+    background-color: transparent;
+    color: #E3BA87;
+}

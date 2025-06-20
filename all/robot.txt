@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /account/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /private/
+Disallow: /backend/
+
+Sitemap: http://vikachdv.beget.tech/sitemap.xml

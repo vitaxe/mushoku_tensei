@@ -1,0 +1,528 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Mak', sans-serif;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(to bottom, black, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.logo img {
+    width: 100px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #B9B9B9;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.active {
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Стили для иконки аккаунта */
+.account {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.account img {
+    height: 40px;
+}
+
+/* Подвал */
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.peg-sou,
+.panel {
+    padding-left: 200px;
+}
+
+.peg-sou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sours {
+    padding-bottom: 10px;
+}
+
+.panel a {
+    text-decoration: none;
+    color: #E4DDCA;
+    font-weight: bold;
+}
+
+/* Профиль */
+.profile {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Раздел Любимые персонажи */
+.favorite-characters {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.favorite-characters h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #603A15;
+}
+
+.character-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.character-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Раздел Мои посты */
+.post-item {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.post-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.delete-post-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.delete-post-btn:hover {
+    background-color: #e60000;
+}
+
+/* Стили для формы редактирования профиля */
+.edit-profile {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    margin-top: 100px;
+}
+
+.edit-profile h2 {
+    font-family: 'Mak', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #603A15;
+}
+
+.edit-profile form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-profile label {
+    font-size: 16px;
+    color: #333;
+}
+
+.edit-profile input[type="text"],
+.edit-profile input[type="email"],
+.edit-profile input[type="password"],
+.edit-profile input[type="file"],
+.edit-profile textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #E3BA87;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.edit-profile textarea {
+    resize: vertical;
+}
+
+.image-preview {
+    margin-top: 10px;
+}
+
+.image-preview img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+    display: block;
+    margin-top: 10px;
+}
+
+.favorite-characters-edit,
+.manage-posts {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.favorite-characters-edit h3,
+.manage-posts h3 {
+    font-size: 20px;
+    color: #603A15;
+    margin-bottom: 10px;
+}
+
+.favorite-characters-edit .characters-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.favorite-characters-edit .characters-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.character-option-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.manage-posts .add-post {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.manage-posts textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-post-btn {
+    align-self: flex-end;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #603A15;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-post-btn:hover {
+    background-color: #4a2710;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.save-btn {
+    background-color: #603A15;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #4a2710;
+}
+
+.cancel-btn:hover {
+    background-color: #b3b3b3;
+}
+
+/* Стили для раздела Любимые персонажи */
+.favorite-characters .character-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Стили для выбора любимых персонажей с изображениями */
+.favorite-characters-edit .characters-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.favorite-characters-edit .characters-options label:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.favorite-characters-edit .characters-options input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Адаптивные стили для аккаунта */
+@media (max-width: 1200px) {
+    .profile {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .save-btn,
+    .cancel-btn,
+    .manage-characters-btn,
+    .submit-post-btn {
+        width: 100%;
+    }
+
+    .edit-profile input[type="file"],
+    .edit-profile textarea {
+        padding: 5px;
+    }
+
+    .image-preview img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .favorite-characters-edit .characters-options {
+        flex-direction: column;
+    }
+
+    .favorite-characters-edit .characters-options label {
+        gap: 5px;
+    }
+
+    .character-option-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .my-posts h2,
+    .favorite-characters h2 {
+        font-size: 28px;
+    }
+
+    .my-posts p,
+    .favorite-characters p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .favorite-characters h2,
+    .my-posts h2 {
+        font-size: 24px;
+    }
+
+    .edit-profile h2 {
+        font-size: 24px;
+    }
+
+    .favorite-characters-edit h3,
+    .manage-posts h3 {
+        font-size: 18px;
+    }
+
+    .submit-post-btn,
+    .save-btn,
+    .cancel-btn {
+        font-size: 14px;
+    }
+}
+
+/* Скрыть header и footer на мобильных устройствах */
+@media (max-width: 1024px) {
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+
+    .indent {
+        height: 60px;
+    }
+    .account-page {
+        padding: 20px 20px 50px;
+    }
+}
+
+/* Нижняя панель навигации */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    border-top: 1px solid #ffffffbe;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    color: #E4DDCA;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.nav-item img {
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.logo-center img {
+    height: 36px;
+}
+
+/* Адаптивность: показывать панель только на мобильных */
+@media (max-width: 1024px) {
+    .bottom-nav {
+        display: flex;
+    }
+}
+
+@media (min-width: 1025px) {
+    .bottom-nav {
+        display: none;
+    }
+}
+
+.content {
+    padding-bottom: 60px;
+}
